@@ -1,0 +1,20 @@
+{
+  "name": "website-template",
+  "version": "0.0.0",
+  "description": "A website template",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 1",
+    "start": "npm start --prefix server",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-horton/website-template.git"
+  },
+  "author": "Adam Horton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adam-horton/website-template/issues"
+  },
+  "homepage": "https://github.com/adam-horton/website-template#readme"
+}
