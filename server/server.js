@@ -2,18 +2,17 @@ const express = require('express');
 const path = require('path');
 const env = require('dotenv');
 
-
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const reactBuild = path.join(__dirname, '..', 'client', 'build');
 
 const app = express();
 app.use(express.static(reactBuild));
 
-app.get("/api", async (req, res) => {
-    res.send({ message: "Hello World!" });
+app.get('/api', (req, res) => {
+    res.send({ message: 'Hello World!' });
 })
 
-app.get("*", async (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(path.join(reactBuild, 'index.html')));
 })
 
